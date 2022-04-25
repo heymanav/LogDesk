@@ -34,5 +34,10 @@ namespace LoadingScreen
                 this.Hide();
             }
         }
+        private void frm_menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
+
     }
 }
