@@ -37,12 +37,12 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBox1.ForeColor = System.Drawing.Color.LimeGreen;
-            this.textBox1.Location = new System.Drawing.Point(431, 21);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Location = new System.Drawing.Point(478, 28);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(96, 32);
+            this.textBox1.Size = new System.Drawing.Size(121, 38);
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "00:00:00\r\n";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -58,25 +58,23 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.LimeGreen;
-            this.button1.Location = new System.Drawing.Point(156, 117);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(61, 64);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(238, 111);
+            this.button1.Size = new System.Drawing.Size(272, 148);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Click me to Mark Attendance";
+            this.button1.Text = " Mark Attendance";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(560, 338);
+            this.ClientSize = new System.Drawing.Size(640, 451);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form3";

@@ -57,6 +57,7 @@ namespace LoadingScreen
 
             MessageBox.Show("New Data is registerred ");
             getAttendanceData();
+            button1.Hide();
         }
 
         private void label4_Click(object sender, EventArgs e)

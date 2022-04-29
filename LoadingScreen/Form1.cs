@@ -24,9 +24,9 @@ namespace LoadingScreen
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            panel2.Width += 1;
+            panel2.Width += 3;
 
-            if(panel2.Width >= 599)
+            if(panel2.Width >= 780)
             {
                 timer1.Stop();
                 Form2 FM2 = new Form2();
@@ -39,5 +39,9 @@ namespace LoadingScreen
             System.Windows.Forms.Application.Exit();
         }
 
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

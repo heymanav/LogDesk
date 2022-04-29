@@ -28,48 +28,6 @@ namespace LoadingScreen
        
         private void button1_Click_1(object sender, EventArgs e)
         {
-            String username, user_passowrd;
-
-            username = usertxt.Text;
-            user_passowrd = passtxt.Text;
-
-            try
-            {
-                String querry = "SELECT * FROM Login WHERE username = '"+usertxt.Text +"' AND password = '"+passtxt.Text+"' ";
-                SqlDataAdapter sda = new SqlDataAdapter(querry,conn);
-
-                DataTable dtable = new DataTable();
-                sda.Fill(dtable);
-
-                if(dtable.Rows.Count > 0)
-                {
-                    username = usertxt.Text;
-                    user_passowrd = passtxt.Text;
-
-
-                    //next screen
-
-                    Form3 formn = new Form3();
-                    formn.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Invalid details", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    passtxt.Clear();
-                    usertxt.Clear();
-                }
-
-            }
-            catch
-            {
-                MessageBox.Show("error");
-            }
-            finally
-            {
-                conn.Close();
-            }
-
 
             
         }
@@ -90,6 +48,49 @@ namespace LoadingScreen
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+            String username, user_passowrd;
+
+            username = usertxt.Text;
+            user_passowrd = passtxt.Text;
+
+            try
+            {
+                String querry = "SELECT * FROM Login WHERE username = '" + usertxt.Text + "' AND password = '" + passtxt.Text + "' ";
+                SqlDataAdapter sda = new SqlDataAdapter(querry, conn);
+
+                DataTable dtable = new DataTable();
+                sda.Fill(dtable);
+
+                if (dtable.Rows.Count > 0)
+                {
+                    username = usertxt.Text;
+                    user_passowrd = passtxt.Text;
+
+
+                    //next screen
+
+                    Form3 formn = new Form3();
+                    formn.Show();
+                    this.Hide();
+                    button2.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid details", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    passtxt.Clear();
+                    usertxt.Clear();
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("error");
+            }
+            finally
+            {
+                conn.Close();
+            }
 
         }
 
