@@ -49,6 +49,19 @@ namespace LoadingScreen
         private void button2_Click(object sender, EventArgs e)
         {
 
+            SqlConnection con = new SqlConnection(@"Data Source=ATHARVA-PC;Initial Catalog=EntryLog;Integrated Security=True");
+            SqlCommand cmd = new SqlCommand("INSERT INTO EntryLog(Entry) values (@Entry)", con);
+
+            cmd.CommandType = CommandType.Text;
+             String entryTime = DateTime.Now.ToLongTimeString();
+            cmd.Parameters.AddWithValue("@Entry", entryTime);
+            
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+
+
             String username, user_passowrd;
 
             username = usertxt.Text;

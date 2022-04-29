@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 using System.Timers;
 namespace LoadingScreen
 
@@ -17,7 +18,7 @@ namespace LoadingScreen
         System.Timers.Timer timer;
 
         int hour, minute, second;
-
+        int count = 0;
         public Form3()
         {
             InitializeComponent();
@@ -32,12 +33,37 @@ namespace LoadingScreen
         {
             timer.Stop();
             Application.DoEvents();
+
+            SqlConnection con = new SqlConnection(@"Data Source=ATHARVA-PC;Initial Catalog=EntryLog;Integrated Security=True");
+            SqlCommand cmd = new SqlCommand("INSERT INTO EntryLog(exitT) values (@exitT)", con);
+
+            cmd.CommandType = CommandType.Text;
+            String exitTime = DateTime.Now.ToLongTimeString();
+            cmd.Parameters.AddWithValue("@exitT", exitTime);
+
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form4 fe2 = new Form4();
-            fe2.Show();
+            
+            count++;
+
+            if (count > 1)
+            {
+                label1.Text = "Attendance already marked";
+
+            }
+            else
+            {
+                Form4 fe2 = new Form4();
+                fe2.Show();
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -61,7 +87,7 @@ namespace LoadingScreen
             }
         }
 
-
+      
 
         private void Form3_Load(object sender, EventArgs e)
         {
@@ -70,6 +96,12 @@ namespace LoadingScreen
             timer.Interval = 1000;  //to make it tick every second
             timer.Elapsed += onTimeEvent;
             timer.Start();
+
+            if (count > 1)
+            {
+                button1.Hide();
+            }
+          
         }
 
         private void onTimeEvent(object? sender, ElapsedEventArgs e)
