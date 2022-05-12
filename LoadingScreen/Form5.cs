@@ -8,56 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using Microsoft.Win32;
-
 
 namespace LoadingScreen
 {
-    public partial class Form2 : Form
+    public partial class Form5 : Form
     {
-
-        
-        public Form2()
+        public Form5()
         {
             InitializeComponent();
-        }
-
-        
-        SqlConnection conn = new SqlConnection(@"Data Source=ATHARVA-PC;Initial Catalog=Login;Integrated Security=True");
-
-       
-       
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-            
-        }
-
-
-        
-        private void Form2_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
 
-            
+
 
 
             String username, user_passowrd;
+            SqlConnection conn = new SqlConnection(@"Data Source=ATHARVA-PC;Initial Catalog=Login;Integrated Security=True");
 
             username = usertxt.Text;
             user_passowrd = passtxt.Text;
-           
+
 
             try
             {
@@ -75,8 +47,8 @@ namespace LoadingScreen
 
                     //next screen
 
-                    Form3 formn = new Form3();
-                    formn.Show();
+                    Form6 fr6 =  new Form6();
+                    fr6.Show();
                     this.Hide();
                     button2.Hide();
                 }
@@ -96,35 +68,7 @@ namespace LoadingScreen
             {
                 conn.Close();
             }
-            SqlConnection con = new SqlConnection(@"Data Source=ATHARVA-PC;Initial Catalog=EntryLog;Integrated Security=True");
-            SqlCommand cmd = new SqlCommand("INSERT INTO EntryLog(Entry,Name) values (@Entry,@Name)", con);
 
-            cmd.CommandType = CommandType.Text;
-            String entryTime = DateTime.Now.ToLongTimeString();
-            cmd.Parameters.AddWithValue("@Entry", entryTime);
-            cmd.Parameters.AddWithValue("@Name", username);
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
-
-
-        }
-
-        private void usertxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-            Form5 fr5 = new Form5();
-            fr5.Show();
-            this.Hide();
         }
     }
 }
