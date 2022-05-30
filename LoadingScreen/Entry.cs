@@ -9,17 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Timers;
+using System.Runtime.InteropServices;
 namespace LoadingScreen
 
 {
-    public partial class Form3 : Form
+    public partial class Entry : Form
     {
 
         System.Timers.Timer timer;
 
         int hour, minute, second;
         int count = 0;
-        public Form3()
+        public Entry()
         {
             InitializeComponent();
         }
@@ -34,17 +35,18 @@ namespace LoadingScreen
             timer.Stop();
             Application.DoEvents();
 
-            SqlConnection con = new SqlConnection(@"Data Source=ATHARVA-PC;Initial Catalog=EntryLog;Integrated Security=True");
-            SqlCommand cmd = new SqlCommand("INSERT INTO EntryLog(exitT) values (@exitT)", con);
+            SqlConnection con = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
+            SqlCommand cmd = new SqlCommand("INSERT INTO EntryLog(ExitTime) values (@ExitTime)", con);
 
             cmd.CommandType = CommandType.Text;
             String exitTime = DateTime.Now.ToLongTimeString();
-            cmd.Parameters.AddWithValue("@exitT", exitTime);
+            cmd.Parameters.AddWithValue("@ExitTime", exitTime);
 
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
 
+            System.Diagnostics.Process.Start("shutdown","/s /t 0");
 
         }
 
@@ -60,7 +62,7 @@ namespace LoadingScreen
             }
             else
             {
-                Form4 fe2 = new Form4();
+                Attendence fe2 = new Attendence();
                 fe2.Show();
             }
 
@@ -78,6 +80,7 @@ namespace LoadingScreen
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            this.Text = "Mark your Attendance";
             timer = new System.Timers.Timer();
 
             timer.Interval = 1000;  //to make it tick every second

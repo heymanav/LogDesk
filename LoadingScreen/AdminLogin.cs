@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace LoadingScreen
 {
-    public partial class Form5 : Form
+    public partial class AdminLogin : Form
     {
-        public Form5()
+        public AdminLogin()
         {
             InitializeComponent();
         }
@@ -25,7 +25,7 @@ namespace LoadingScreen
 
 
             String username, user_passowrd;
-            SqlConnection conn = new SqlConnection(@"Data Source=ATHARVA-PC;Initial Catalog=Login;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
 
             username = usertxt.Text;
             user_passowrd = passtxt.Text;
@@ -33,7 +33,7 @@ namespace LoadingScreen
 
             try
             {
-                String querry = "SELECT * FROM Login WHERE username = '" + usertxt.Text + "' AND password = '" + passtxt.Text + "' ";
+                String querry = "SELECT * FROM AdminLogin WHERE username = '" + usertxt.Text + "' AND password = '" + passtxt.Text + "' ";
                 SqlDataAdapter sda = new SqlDataAdapter(querry, conn);
 
                 DataTable dtable = new DataTable();
@@ -47,7 +47,7 @@ namespace LoadingScreen
 
                     //next screen
 
-                    Form6 fr6 =  new Form6();
+                    AdDashboard fr6 =  new AdDashboard();
                     fr6.Show();
                     this.Hide();
                     button2.Hide();
@@ -68,6 +68,17 @@ namespace LoadingScreen
             {
                 conn.Close();
             }
+
+        }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+            this.Text = "Admin Login";
+        }
+
+        
+        private void label4_Click(object sender, EventArgs e)
+        {
 
         }
     }

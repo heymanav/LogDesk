@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace LoadingScreen
 {
-    public partial class Form6 : Form
+    public partial class AdDashboard : Form
     {
-        public Form6()
+        public AdDashboard()
         {
             InitializeComponent();
         }
@@ -21,12 +21,13 @@ namespace LoadingScreen
         private void Form6_Load(object sender, EventArgs e)
         {
             getEntryLogData();
-           
+            this.Text = "Dashboard";
+
         }
 
         private void getEntryLogData()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=ATHARVA-PC;Initial Catalog=EntryLog;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
             SqlCommand cmd = new SqlCommand("Select * from EntryLog", con);
             DataTable dt = new DataTable();
 

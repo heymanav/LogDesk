@@ -1,8 +1,8 @@
 namespace LoadingScreen
 {
-    public partial class Form1 : Form
+    public partial class LoadingScreen : Form
     {
-        public Form1()
+        public LoadingScreen()
         {
             InitializeComponent();
         }
@@ -29,7 +29,7 @@ namespace LoadingScreen
             if(panel2.Width >= 780)
             {
                 timer1.Stop();
-                Form2 FM2 = new Form2();
+                LoginScreen FM2 = new LoginScreen();
                 FM2.Show();
                 this.Hide();
             }
@@ -40,6 +40,11 @@ namespace LoadingScreen
         }
 
         private void timer2_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

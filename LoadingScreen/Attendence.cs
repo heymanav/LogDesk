@@ -11,15 +11,16 @@ using System.Data.SqlClient;
 
 namespace LoadingScreen
 {
-    public partial class Form4 : Form
+    public partial class Attendence : Form
     {
-        public Form4()
+        public Attendence()
         {
             InitializeComponent();
         }
 
         private void Form4_Load(object sender, EventArgs e)
         {
+            this.Text = "Attendance";
             getAttendanceData();
         }
 
@@ -29,8 +30,8 @@ namespace LoadingScreen
         }
         private void getAttendanceData()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=ATHARVA-PC;Initial Catalog=Crud;Integrated Security=True");
-            SqlCommand cmd = new SqlCommand("Select * from reallylast", con);
+            SqlConnection con = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
+            SqlCommand cmd = new SqlCommand("Select * from attendence", con);
             DataTable dt = new DataTable();
 
             con.Open();
@@ -44,8 +45,8 @@ namespace LoadingScreen
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=ATHARVA-PC;Initial Catalog=Crud;Integrated Security=True");
-            SqlCommand cmd = new SqlCommand("INSERT INTO reallylast values (@id,@Name,@Subject)", con);
+            SqlConnection con = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
+            SqlCommand cmd = new SqlCommand("INSERT INTO attendence values (@id,@Name,@Subject)", con);
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@id", textBox1.Text);
             cmd.Parameters.AddWithValue("@Name", textBox2.Text);
