@@ -16,6 +16,7 @@ namespace LoadingScreen
 
         
         SqlConnection conn = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
+
         private void LoginScreen_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -83,7 +84,7 @@ namespace LoadingScreen
                             where nic.OperationalStatus == OperationalStatus.Up
                             select nic.GetPhysicalAddress().ToString()
                             ).FirstOrDefault();
-                    String date = DateTime.Now.ToString("d-M-yyyy");
+                    string date = DateTime.Now.ToString("dd/MM/yyyy");
                     cmd1.CommandType = CommandType.Text;
                     cmd1.Parameters.AddWithValue("@name", username);
                     cmd1.Parameters.AddWithValue("@pcname", PC_Name);
