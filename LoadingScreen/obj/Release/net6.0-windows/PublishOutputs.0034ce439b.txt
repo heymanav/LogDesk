@@ -1,0 +1,11 @@
+E:\MINI PROJECT\LoadingScreen.exe
+E:\MINI PROJECT\LoadingScreen.dll
+E:\MINI PROJECT\LoadingScreen.deps.json
+E:\MINI PROJECT\LoadingScreen.runtimeconfig.json
+E:\MINI PROJECT\LoadingScreen.pdb
+E:\MINI PROJECT\System.Data.SqlClient.dll
+E:\MINI PROJECT\runtimes\win-arm64\native\sni.dll
+E:\MINI PROJECT\runtimes\win-x64\native\sni.dll
+E:\MINI PROJECT\runtimes\win-x86\native\sni.dll
+E:\MINI PROJECT\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\MINI PROJECT\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

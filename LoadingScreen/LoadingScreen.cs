@@ -1,3 +1,5 @@
+using LogDesk;
+
 namespace LoadingScreen
 {
     public partial class LoadingScreen : Form
@@ -29,7 +31,7 @@ namespace LoadingScreen
             if(panel2.Width >= 780)
             {
                 timer1.Stop();
-                LoginScreen FM2 = new LoginScreen();
+                WelScreen FM2 = new WelScreen();
                 FM2.Show();
                 this.Hide();
             }

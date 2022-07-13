@@ -1,0 +1,11 @@
+E:\Setup\LoadingScreen.exe
+E:\Setup\LoadingScreen.dll
+E:\Setup\LoadingScreen.deps.json
+E:\Setup\LoadingScreen.runtimeconfig.json
+E:\Setup\LoadingScreen.pdb
+E:\Setup\System.Data.SqlClient.dll
+E:\Setup\runtimes\win-arm64\native\sni.dll
+E:\Setup\runtimes\win-x64\native\sni.dll
+E:\Setup\runtimes\win-x86\native\sni.dll
+E:\Setup\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\Setup\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

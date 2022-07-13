@@ -1,0 +1,13 @@
+C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Debug\net6.0-windows\SBJITMR.csproj.AssemblyReference.cache
+C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Debug\net6.0-windows\LoadingScreen.Form1.resources
+C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Debug\net6.0-windows\LoadingScreen.Form2.resources
+C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Debug\net6.0-windows\LoadingScreen.Form3.resources
+C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Debug\net6.0-windows\LoadingScreen.Form4.resources
+C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Debug\net6.0-windows\LoadingScreen.Form5.resources
+C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Debug\net6.0-windows\LoadingScreen.Form6.resources
+C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Debug\net6.0-windows\SBJITMR.Properties.Resources.resources
+C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Debug\net6.0-windows\SBJITMR.csproj.GenerateResource.cache
+C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Debug\net6.0-windows\SBJITMR.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Debug\net6.0-windows\SBJITMR.AssemblyInfoInputs.cache
+C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Debug\net6.0-windows\SBJITMR.AssemblyInfo.cs
+C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Debug\net6.0-windows\SBJITMR.csproj.CoreCompileInputs.cache

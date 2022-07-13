@@ -1,0 +1,11 @@
+E:\SBJITMR\LoadingScreen.exe
+E:\SBJITMR\LoadingScreen.dll
+E:\SBJITMR\LoadingScreen.deps.json
+E:\SBJITMR\LoadingScreen.runtimeconfig.json
+E:\SBJITMR\LoadingScreen.pdb
+E:\SBJITMR\System.Data.SqlClient.dll
+E:\SBJITMR\runtimes\win-arm64\native\sni.dll
+E:\SBJITMR\runtimes\win-x64\native\sni.dll
+E:\SBJITMR\runtimes\win-x86\native\sni.dll
+E:\SBJITMR\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\SBJITMR\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

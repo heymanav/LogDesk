@@ -1,0 +1,11 @@
+C:\Users\Lenovo\OneDrive\Desktop\Setup\LoadingScreen.exe
+C:\Users\Lenovo\OneDrive\Desktop\Setup\LoadingScreen.dll
+C:\Users\Lenovo\OneDrive\Desktop\Setup\LoadingScreen.deps.json
+C:\Users\Lenovo\OneDrive\Desktop\Setup\LoadingScreen.runtimeconfig.json
+C:\Users\Lenovo\OneDrive\Desktop\Setup\LoadingScreen.pdb
+C:\Users\Lenovo\OneDrive\Desktop\Setup\System.Data.SqlClient.dll
+C:\Users\Lenovo\OneDrive\Desktop\Setup\runtimes\win-arm64\native\sni.dll
+C:\Users\Lenovo\OneDrive\Desktop\Setup\runtimes\win-x64\native\sni.dll
+C:\Users\Lenovo\OneDrive\Desktop\Setup\runtimes\win-x86\native\sni.dll
+C:\Users\Lenovo\OneDrive\Desktop\Setup\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Lenovo\OneDrive\Desktop\Setup\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

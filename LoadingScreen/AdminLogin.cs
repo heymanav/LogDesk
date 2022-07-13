@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Data;
 using System.Data.SqlClient;
 
 namespace LoadingScreen
@@ -18,12 +10,29 @@ namespace LoadingScreen
             InitializeComponent();
         }
 
+        private void AdminLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            usertxt.Focus();
+        }
+
+        private void usertxt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                passtxt.Focus();
+            }
+        }
+
+        private void passtxt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button2.PerformClick();
+            }
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
-
-
-
-
             String username, user_passowrd;
             SqlConnection conn = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
 
@@ -54,7 +63,7 @@ namespace LoadingScreen
                 }
                 else
                 {
-                    MessageBox.Show("Invalid details", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Invalid Credentials", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     passtxt.Clear();
                     usertxt.Clear();
                 }
@@ -62,7 +71,7 @@ namespace LoadingScreen
             }
             catch
             {
-                MessageBox.Show("error");
+                MessageBox.Show("Error");
             }
             finally
             {
@@ -76,10 +85,12 @@ namespace LoadingScreen
             this.Text = "Admin Login";
         }
 
-        
-        private void label4_Click(object sender, EventArgs e)
-        {
 
+        private void AdminLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            System.Diagnostics.Process.Start("shutdown", "/s /t 0");
         }
+
+
     }
 }
