@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\athar\\source\\repos\\LogDesk2\\LoadingScreen\\LogDesk.csproj": {}
+    "C:\\Users\\athar\\Source\\Repos\\LogDesk2\\LoadingScreen\\LogDesk.csproj": {}
   },
   "projects": {
-    "C:\\Users\\athar\\source\\repos\\LogDesk2\\LoadingScreen\\LogDesk.csproj": {
+    "C:\\Users\\athar\\Source\\Repos\\LogDesk2\\LoadingScreen\\LogDesk.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\athar\\source\\repos\\LogDesk2\\LoadingScreen\\LogDesk.csproj",
+        "projectUniqueName": "C:\\Users\\athar\\Source\\Repos\\LogDesk2\\LoadingScreen\\LogDesk.csproj",
         "projectName": "LogDesk",
-        "projectPath": "C:\\Users\\athar\\source\\repos\\LogDesk2\\LoadingScreen\\LogDesk.csproj",
+        "projectPath": "C:\\Users\\athar\\Source\\Repos\\LogDesk2\\LoadingScreen\\LogDesk.csproj",
         "packagesPath": "C:\\Users\\athar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\athar\\source\\repos\\LogDesk2\\LoadingScreen\\obj\\",
+        "outputPath": "C:\\Users\\athar\\Source\\Repos\\LogDesk2\\LoadingScreen\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
