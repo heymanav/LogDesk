@@ -29,3 +29,34 @@ C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Deb
 C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Debug\net6.0-windows7.0\LogDesk.genruntimeconfig.cache
 C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Debug\net6.0-windows7.0\ref\LogDesk.dll
 C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Debug\net6.0-windows7.0\LogDesk.WelScreen.resources
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\bin\Debug\net6.0-windows7.0\LogDesk.exe
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\bin\Debug\net6.0-windows7.0\LogDesk.deps.json
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\bin\Debug\net6.0-windows7.0\LogDesk.runtimeconfig.json
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\bin\Debug\net6.0-windows7.0\LogDesk.dll
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\bin\Debug\net6.0-windows7.0\LogDesk.pdb
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\bin\Debug\net6.0-windows7.0\System.Data.SqlClient.dll
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\bin\Debug\net6.0-windows7.0\runtimes\win-arm64\native\sni.dll
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\bin\Debug\net6.0-windows7.0\runtimes\win-x64\native\sni.dll
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\bin\Debug\net6.0-windows7.0\runtimes\win-x86\native\sni.dll
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\bin\Debug\net6.0-windows7.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\bin\Debug\net6.0-windows7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\obj\Debug\net6.0-windows7.0\LogDesk.csproj.AssemblyReference.cache
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\obj\Debug\net6.0-windows7.0\LoadingScreen.AdDashboard.resources
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\obj\Debug\net6.0-windows7.0\LoadingScreen.AdminLogin.resources
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\obj\Debug\net6.0-windows7.0\LoadingScreen.Attendence.resources
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\obj\Debug\net6.0-windows7.0\LoadingScreen.Entry.resources
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\obj\Debug\net6.0-windows7.0\LoadingScreen.LoadingScreen.resources
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\obj\Debug\net6.0-windows7.0\LoadingScreen.LoginScreen.resources
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\obj\Debug\net6.0-windows7.0\LogDesk.Properties.Resources.resources
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\obj\Debug\net6.0-windows7.0\LogDesk.WelScreen.resources
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\obj\Debug\net6.0-windows7.0\LogDesk.csproj.GenerateResource.cache
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\obj\Debug\net6.0-windows7.0\LogDesk.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\obj\Debug\net6.0-windows7.0\LogDesk.AssemblyInfoInputs.cache
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\obj\Debug\net6.0-windows7.0\LogDesk.AssemblyInfo.cs
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\obj\Debug\net6.0-windows7.0\LogDesk.csproj.CoreCompileInputs.cache
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\obj\Debug\net6.0-windows7.0\LogDesk.csproj.CopyComplete
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\obj\Debug\net6.0-windows7.0\LogDesk.dll
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\obj\Debug\net6.0-windows7.0\refint\LogDesk.dll
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\obj\Debug\net6.0-windows7.0\LogDesk.pdb
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\obj\Debug\net6.0-windows7.0\LogDesk.genruntimeconfig.cache
+C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\obj\Debug\net6.0-windows7.0\ref\LogDesk.dll

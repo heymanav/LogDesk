@@ -13,6 +13,8 @@ namespace LoadingScreen
             InitializeComponent();
         }
 
+        DataView dv;
+        DataTable dt;
         private void Form6_Load(object sender, EventArgs e)
         {
             getEntryLogData();
@@ -24,15 +26,16 @@ namespace LoadingScreen
         {
             SqlConnection con = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
             SqlCommand cmd = new SqlCommand("Select * from EntryLog", con);
-            DataTable dt = new DataTable();
-
+            dt = new DataTable();
+           
             con.Open();
 
             SqlDataReader sdr = cmd.ExecuteReader();
             dt.Load(sdr);
+            dv = new DataView(dt);
             con.Close();
 
-            dataGridView1.DataSource = dt;
+            dataGridView1.DataSource = dv;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -130,6 +133,37 @@ namespace LoadingScreen
             }
             numberOfItemsPerPage = 0;
             numberOfItemsPrintedSoFar = 0;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DateTime Date1 = dateTimePicker1.Value.Date;
+            
+            DateTime Date2 = dateTimePicker2.Value.Date;
+           
+
+            dv.RowFilter = String.Format("Date > #{0:MM/dd/yyyy}# AND Date < #{1:MM/dd/yyyy}#", Date1, Date2);
+
+            dataGridView1.DataSource = dv;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            DateTime Date1 = dateTimePicker1.Value.Date;
+
+            DateTime Date2 = dateTimePicker2.Value.Date;
+
+
+            dv.RowFilter = String.Format("Date > #{0:MM/dd/yyyy}# AND Date < #{1:MM/dd/yyyy}#", Date1, Date2);
+
+            dataGridView1.DataSource = dv;
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

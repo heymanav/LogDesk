@@ -84,7 +84,8 @@ namespace LoadingScreen
                             where nic.OperationalStatus == OperationalStatus.Up
                             select nic.GetPhysicalAddress().ToString()
                             ).FirstOrDefault();
-                    string date = DateTime.Now.ToString("dd/MM/yyyy");
+                    var date = DateTime.Now;
+                    var onlyDate = date.Date;
                     cmd1.CommandType = CommandType.Text;
                     cmd1.Parameters.AddWithValue("@name", username);
                     cmd1.Parameters.AddWithValue("@pcname", PC_Name);
@@ -92,7 +93,7 @@ namespace LoadingScreen
                     cmd.CommandType = CommandType.Text;
                     cmd.Parameters.AddWithValue("@Name", username);
                     cmd.Parameters.AddWithValue("@PC_Name", PC_Name);
-                    cmd.Parameters.AddWithValue("@Date", date);
+                    cmd.Parameters.AddWithValue("@Date", onlyDate);
                     cmd.Parameters.AddWithValue("@EntryTime", entryTime);
                     cmd.Parameters.AddWithValue("@MAC_Address", macAddr);
 
@@ -138,7 +139,7 @@ namespace LoadingScreen
 
         private void LoginScreen_FormClosing(object sender, FormClosingEventArgs e)
         {
-            System.Diagnostics.Process.Start("shutdown", "/s /t 0");
+            //System.Diagnostics.Process.Start("shutdown", "/s /t 0");
         }
 
 
