@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
   <asmv1:assemblyIdentity name="LogDesk.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
-  <description asmv2:iconFile="Resources\Logdesk.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <description asmv2:iconFile="Resources\sbjitlogof4__1_-removebg-preview.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
     <assemblyIdentity name="Launcher" version="5.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -63,22 +63,22 @@
       <dsig:DigestValue>9yUIEj0PlqmrUmZnswGl0Cdrrp6z1+3HgNZnGY2CUMI=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="LogDesk.dll" size="923648">
+  <file name="LogDesk.dll" size="1298944">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>3DNm9eI6tlMh1c2i1bjgXNCq1dTgIlOemLGCnCtpGQw=</dsig:DigestValue>
+      <dsig:DigestValue>vhoLhw5MNW7wVdJFUfvU4/NlLYWdL1haSF1WKHWLo2s=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="LogDesk.exe" size="241664">
+  <file name="LogDesk.exe" size="229888">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>jEjHSoCDvIyzvXSZc7peC6URueg4JcsPt+/kFCOBxMY=</dsig:DigestValue>
+      <dsig:DigestValue>A4nbCQp92dfN59BShdtDnw+iHwOrw5mGmpLMifDjYKw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="LogDesk.runtimeconfig.json" size="372">
@@ -90,13 +90,13 @@
       <dsig:DigestValue>HsoPDHAHCqg7tgnkt0mybctECXhDJgMnJjlHIiJKCYo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\Logdesk.ico" size="93062">
+  <file name="Resources\sbjitlogof4__1_-removebg-preview.ico" size="80462">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>WIdI2JZ9ZE42Tm2I3baSL2uSv8Dbj5ZH1r3jXh5QTew=</dsig:DigestValue>
+      <dsig:DigestValue>qSxhI4TZ5ZCWu2EvzEAyG8L05r/fDqKtDRv0A1BFibc=</dsig:DigestValue>
     </hash>
   </file>
   <file name="runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll" size="955256">

@@ -35,6 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.signup = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // usertxt
@@ -52,11 +53,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(260, 99);
+            this.label1.Location = new System.Drawing.Point(267, 99);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 24);
+            this.label1.Size = new System.Drawing.Size(101, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Username :";
+            this.label1.Text = "Email ID :";
             // 
             // passtxt
             // 
@@ -90,7 +91,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.LimeGreen;
-            this.button2.Location = new System.Drawing.Point(344, 218);
+            this.button2.Location = new System.Drawing.Point(249, 219);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(133, 35);
             this.button2.TabIndex = 6;
@@ -110,6 +111,23 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "STUDENT LOGIN";
             // 
+            // signup
+            // 
+            this.signup.BackColor = System.Drawing.Color.MidnightBlue;
+            this.signup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.signup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.signup.FlatAppearance.BorderSize = 0;
+            this.signup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.signup.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.signup.ForeColor = System.Drawing.Color.LimeGreen;
+            this.signup.Location = new System.Drawing.Point(438, 219);
+            this.signup.Name = "signup";
+            this.signup.Size = new System.Drawing.Size(133, 35);
+            this.signup.TabIndex = 10;
+            this.signup.Text = "Sign Up";
+            this.signup.UseVisualStyleBackColor = false;
+            this.signup.Click += new System.EventHandler(this.button1_Click);
+            // 
             // LoginScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -117,6 +135,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(595, 285);
+            this.Controls.Add(this.signup);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
@@ -147,5 +166,6 @@
         private Label label3;
         private Button button2;
         private Label label4;
+        private Button signup;
     }
 }

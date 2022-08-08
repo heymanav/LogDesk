@@ -1,6 +1,7 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
 using System.Net.NetworkInformation;
+using LogDesk;
 
 namespace LoadingScreen
 {
@@ -53,15 +54,15 @@ namespace LoadingScreen
 
         private void button2_Click(object sender, EventArgs e)
         {
-            String username, user_passowrd;
+            String email, user_passowrd;
 
-            username = usertxt.Text;
+            email = usertxt.Text;
             user_passowrd = passtxt.Text;
            
 
             try
             {
-                String querry = "SELECT * FROM Login WHERE username = '" + usertxt.Text + "' AND password = '" + passtxt.Text + "' ";
+                String querry = "SELECT * FROM Login WHERE Email = '" + email + "' AND Password = '" + user_passowrd + "' ";
                 SqlDataAdapter sda = new SqlDataAdapter(querry, conn);
 
                 DataTable dtable = new DataTable();
@@ -69,13 +70,13 @@ namespace LoadingScreen
 
                 if (dtable.Rows.Count > 0)
                 {
-                    username = usertxt.Text;
+                    email = usertxt.Text;
                     user_passowrd = passtxt.Text;
 
                     //insert information into database
                     SqlConnection con = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
-                    SqlCommand cmd = new SqlCommand("INSERT INTO EntryLog(Name,PC_Name,Date,EntryTime,MAC_Address) values (@Name,@PC_Name,@Date,@EntryTime,@MAC_Address)", con);
-                    SqlCommand cmd1 = new SqlCommand("select id from EntryLog where Name=@name AND PC_Name=@pcname AND EntryTime=@entrytime", con);
+                    SqlCommand cmd = new SqlCommand("INSERT INTO EntryLog(Email,PC_Name,Date,EntryTime,MAC_Address) values (@Email,@PC_Name,@Date,@EntryTime,@MAC_Address)", con);
+                    SqlCommand cmd1 = new SqlCommand("select id from EntryLog where Email=@email AND PC_Name=@pcname AND EntryTime=@entrytime", con);
 
                     String entryTime = DateTime.Now.ToLongTimeString();
                     String PC_Name = System.Environment.MachineName;
@@ -85,15 +86,14 @@ namespace LoadingScreen
                             select nic.GetPhysicalAddress().ToString()
                             ).FirstOrDefault();
                     var date = DateTime.Now;
-                    var onlyDate = date.Date;
                     cmd1.CommandType = CommandType.Text;
-                    cmd1.Parameters.AddWithValue("@name", username);
+                    cmd1.Parameters.AddWithValue("@email", email);
                     cmd1.Parameters.AddWithValue("@pcname", PC_Name);
                     cmd1.Parameters.AddWithValue("@entrytime", entryTime);
                     cmd.CommandType = CommandType.Text;
-                    cmd.Parameters.AddWithValue("@Name", username);
+                    cmd.Parameters.AddWithValue("@Email", email);
                     cmd.Parameters.AddWithValue("@PC_Name", PC_Name);
-                    cmd.Parameters.AddWithValue("@Date", onlyDate);
+                    cmd.Parameters.AddWithValue("@Date", date);
                     cmd.Parameters.AddWithValue("@EntryTime", entryTime);
                     cmd.Parameters.AddWithValue("@MAC_Address", macAddr);
 
@@ -133,15 +133,16 @@ namespace LoadingScreen
 
         }
 
-        private void usertxt_TextChanged(object sender, EventArgs e)
-        {
-        }
-
         private void LoginScreen_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //System.Diagnostics.Process.Start("shutdown", "/s /t 0");
+            System.Diagnostics.Process.Start("shutdown", "/s /t 0");
         }
 
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Signup form = new Signup();
+            form.Show();
+            this.Hide();
+        }
     }
 }

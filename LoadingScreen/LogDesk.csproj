@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows7.0</TargetFramework>
     <Nullable>enable</Nullable>
-	  <ApplicationIcon>Resources\Logdesk.ico</ApplicationIcon>
+	  <ApplicationIcon>Resources\sbjitlogof4__1_-removebg-preview.ico</ApplicationIcon>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <Platforms>AnyCPU;x64</Platforms>

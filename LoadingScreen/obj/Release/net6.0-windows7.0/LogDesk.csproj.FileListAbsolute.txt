@@ -28,6 +28,8 @@ C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Rel
 C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Release\net6.0-windows7.0\LogDesk.pdb
 C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Release\net6.0-windows7.0\LogDesk.genruntimeconfig.cache
 C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Release\net6.0-windows7.0\ref\LogDesk.dll
+C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Release\net6.0-windows7.0\LogDesk.WelScreen.resources
+C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Release\net6.0-windows7.0\LogDesk.Signup.resources
 C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\bin\Release\net6.0-windows7.0\LogDesk.dll.manifest
 C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\bin\Release\net6.0-windows7.0\LogDesk.application
 C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Release\net6.0-windows7.0\LogDesk.dll.manifest

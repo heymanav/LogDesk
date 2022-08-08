@@ -35,21 +35,16 @@ namespace LoadingScreen
             if (count > 1)
             {
                 label1.Text = "Attendance already marked";
-
             }
             else
             {
                 Attendence fe2 = new Attendence();
                 fe2.Show();
+                
             }
 
         }
 
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Entry_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -66,25 +61,34 @@ namespace LoadingScreen
             cmd.ExecuteNonQuery();
             con.Close();
 
-            //System.Diagnostics.Process.Start("shutdown", "/s /t 0");
+           System.Diagnostics.Process.Start("shutdown", "/s /t 0");
 
+        }
+
+        private void Entry_ResizeBegin(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                notifyIcon1.Visible = true;
+                this.Hide();
+            }
         }
 
         private void Entry_Load(object sender, EventArgs e)
         {
             this.Text = "Mark your Attendance";
+            this.ShowInTaskbar = false;
             timer = new System.Timers.Timer();
 
             timer.Interval = 1000;  //to make it tick every second
             timer.Elapsed += onTimeEvent;
             timer.Start();
 
-            if (count > 1)
+           if (count > 1)
             {
                 button1.Hide();
             }
         }
-
 
         private void onTimeEvent(object? sender, ElapsedEventArgs e)
         {

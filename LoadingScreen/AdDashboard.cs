@@ -38,11 +38,6 @@ namespace LoadingScreen
             dataGridView1.DataSource = dv;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void button_Click(object sender, EventArgs e)
         {
             PrintDialog PrintDialog1 = new PrintDialog();
@@ -142,7 +137,7 @@ namespace LoadingScreen
             DateTime Date2 = dateTimePicker2.Value.Date;
            
 
-            dv.RowFilter = String.Format("Date > #{0:MM/dd/yyyy}# AND Date < #{1:MM/dd/yyyy}#", Date1, Date2);
+            dv.RowFilter = String.Format("Date >= #{0:MM/dd/yyyy}# AND Date <= #{1:MM/dd/yyyy}#", Date1, Date2);
 
             dataGridView1.DataSource = dv;
         }
@@ -155,14 +150,9 @@ namespace LoadingScreen
             DateTime Date2 = dateTimePicker2.Value.Date;
 
 
-            dv.RowFilter = String.Format("Date > #{0:MM/dd/yyyy}# AND Date < #{1:MM/dd/yyyy}#", Date1, Date2);
+            dv.RowFilter = String.Format("Date >= #{0:MM/dd/yyyy}# AND Date <= #{1:MM/dd/yyyy}#", Date1, Date2);
 
             dataGridView1.DataSource = dv;
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
 
         }
     }

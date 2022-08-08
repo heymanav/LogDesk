@@ -35,6 +35,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.SuspendLayout();
             // 
             // textBox1
@@ -92,7 +93,12 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Note : After closing this window, the System will Shutdown and Sesssion will be r" +
     "ecorded.";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.notifyIcon1.BalloonTipTitle = "LogDesk";
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             // 
             // Entry
             // 
@@ -107,11 +113,13 @@
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "Entry";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form3";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Entry_FormClosing);
             this.Load += new System.EventHandler(this.Entry_Load);
+            this.ResizeBegin += new System.EventHandler(this.Entry_ResizeBegin);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,5 +132,6 @@
         private Button button1;
         private Label label1;
         private Label label2;
+        private NotifyIcon notifyIcon1;
     }
 }

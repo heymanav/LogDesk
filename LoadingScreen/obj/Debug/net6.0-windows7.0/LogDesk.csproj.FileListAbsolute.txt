@@ -60,3 +60,4 @@ C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\obj\Debug\net6.0-windows7.0\r
 C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\obj\Debug\net6.0-windows7.0\LogDesk.pdb
 C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\obj\Debug\net6.0-windows7.0\LogDesk.genruntimeconfig.cache
 C:\Users\athar\Source\Repos\LogDesk2\LoadingScreen\obj\Debug\net6.0-windows7.0\ref\LogDesk.dll
+C:\Users\Lenovo\OneDrive\Desktop\Mini Project\miniProjectt\LoadingScreen\obj\Debug\net6.0-windows7.0\LogDesk.Signup.resources
