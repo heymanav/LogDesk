@@ -26,5 +26,10 @@ namespace LoadingScreen
         {
 
         }
+
+        private void LoadingScreen_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            System.Diagnostics.Process.Start("shutdown", "/s /t 0");
+        }
     }
 }

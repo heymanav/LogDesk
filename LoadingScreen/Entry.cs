@@ -38,11 +38,11 @@ namespace LoadingScreen
             }
             else
             {
-                Attendence fe2 = new Attendence();
+                Attendence fe2 = new Attendence(id);
                 fe2.Show();
                 
             }
-
+            this.WindowState = FormWindowState.Minimized;
         }
 
 
@@ -50,8 +50,9 @@ namespace LoadingScreen
         {
             timer.Stop();
             Application.DoEvents();
-           
-            SqlConnection con = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
+
+            //SqlConnection con = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-"); 
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-4I2HF4V;Initial Catalog=SBJITMR;Persist Security Info=True;User ID = admin;Password = 1234");
             SqlCommand cmd = new SqlCommand("UPDATE EntryLog SET ExitTime=@ExitTime where id = @id", con);
             cmd.CommandType = CommandType.Text;
             String exitTime = DateTime.Now.ToLongTimeString();
@@ -65,13 +66,23 @@ namespace LoadingScreen
 
         }
 
-        private void Entry_ResizeBegin(object sender, EventArgs e)
+        private void Entry_SizeChanged(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Minimized)
             {
-                notifyIcon1.Visible = true;
                 this.Hide();
+                notifyIcon1.Visible = true;
+                this.ShowInTaskbar = false;
+                //notifyIcon1.BalloonTipText = "LogDesk";
+                //notifyIcon1.ShowBalloonTip(1000);
             }
+        }
+
+        private void notifyIcon1_DoubleClick(object sender, EventArgs e)
+        {
+            this.Show();
+            notifyIcon1.Visible=false;
+            WindowState = FormWindowState.Normal;
         }
 
         private void Entry_Load(object sender, EventArgs e)

@@ -99,6 +99,7 @@
             this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.notifyIcon1.BalloonTipTitle = "LogDesk";
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.DoubleClick += new System.EventHandler(this.notifyIcon1_DoubleClick);
             // 
             // Entry
             // 
@@ -119,7 +120,7 @@
             this.Text = "Form3";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Entry_FormClosing);
             this.Load += new System.EventHandler(this.Entry_Load);
-            this.ResizeBegin += new System.EventHandler(this.Entry_ResizeBegin);
+            this.SizeChanged += new System.EventHandler(this.Entry_SizeChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 

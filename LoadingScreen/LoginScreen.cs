@@ -15,8 +15,9 @@ namespace LoadingScreen
             InitializeComponent();
         }
 
-        
-        SqlConnection conn = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
+
+        //SqlConnection conn = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
+        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-4I2HF4V;Initial Catalog=SBJITMR;Persist Security Info=True;User ID = admin;Password = 1234");
 
         private void LoginScreen_KeyDown(object sender, KeyEventArgs e)
         {
@@ -47,10 +48,6 @@ namespace LoadingScreen
             this.Text = "Login";
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -74,7 +71,8 @@ namespace LoadingScreen
                     user_passowrd = passtxt.Text;
 
                     //insert information into database
-                    SqlConnection con = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
+                    //SqlConnection con = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
+                    SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-4I2HF4V;Initial Catalog=SBJITMR;Persist Security Info=True;User ID = admin;Password = 1234");
                     SqlCommand cmd = new SqlCommand("INSERT INTO EntryLog(Email,PC_Name,Date,EntryTime,MAC_Address) values (@Email,@PC_Name,@Date,@EntryTime,@MAC_Address)", con);
                     SqlCommand cmd1 = new SqlCommand("select id from EntryLog where Email=@email AND PC_Name=@pcname AND EntryTime=@entrytime", con);
 
@@ -85,7 +83,7 @@ namespace LoadingScreen
                             where nic.OperationalStatus == OperationalStatus.Up
                             select nic.GetPhysicalAddress().ToString()
                             ).FirstOrDefault();
-                    var date = DateTime.Now;
+                    var date = DateTime.UtcNow.ToShortDateString();
                     cmd1.CommandType = CommandType.Text;
                     cmd1.Parameters.AddWithValue("@email", email);
                     cmd1.Parameters.AddWithValue("@pcname", PC_Name);
@@ -109,6 +107,7 @@ namespace LoadingScreen
                     //next screen
 
                     Entry formn = new Entry(id);
+                    Attendence fr = new Attendence(id);
                     formn.Show();
                     this.Hide();
                     button2.Hide();

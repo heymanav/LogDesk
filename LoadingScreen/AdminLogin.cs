@@ -34,7 +34,7 @@ namespace LoadingScreen
         private void button2_Click(object sender, EventArgs e)
         {
             String username, user_passowrd;
-            SqlConnection conn = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
+            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-4I2HF4V;Initial Catalog=SBJITMR;Persist Security Info=True;User ID = admin;Password = 1234");
 
             username = usertxt.Text;
             user_passowrd = passtxt.Text;
@@ -42,6 +42,7 @@ namespace LoadingScreen
 
             try
             {
+
                 String querry = "SELECT * FROM AdminLogin WHERE username = '" + usertxt.Text + "' AND password = '" + passtxt.Text + "' ";
                 SqlDataAdapter sda = new SqlDataAdapter(querry, conn);
 

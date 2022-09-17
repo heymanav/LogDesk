@@ -63,22 +63,22 @@
       <dsig:DigestValue>9yUIEj0PlqmrUmZnswGl0Cdrrp6z1+3HgNZnGY2CUMI=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="LogDesk.dll" size="1298944">
+  <file name="LogDesk.dll" size="1206784">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>vhoLhw5MNW7wVdJFUfvU4/NlLYWdL1haSF1WKHWLo2s=</dsig:DigestValue>
+      <dsig:DigestValue>lX6Kf1b5RnXO6Fqjn2cNTB6n/RzYQ9HlmkyGsoyYKdE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="LogDesk.exe" size="229888">
+  <file name="LogDesk.exe" size="228864">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>A4nbCQp92dfN59BShdtDnw+iHwOrw5mGmpLMifDjYKw=</dsig:DigestValue>
+      <dsig:DigestValue>fjmTwBUhp1rqkYoGth4IkwM8V7wD+GdP8fHiIH4uD28=</dsig:DigestValue>
     </hash>
   </file>
   <file name="LogDesk.runtimeconfig.json" size="372">

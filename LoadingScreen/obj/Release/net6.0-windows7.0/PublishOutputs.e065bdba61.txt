@@ -1,0 +1,11 @@
+E:\LogDesk - A Virtual LogBook\LogDesk.exe
+E:\LogDesk - A Virtual LogBook\LogDesk.dll
+E:\LogDesk - A Virtual LogBook\LogDesk.deps.json
+E:\LogDesk - A Virtual LogBook\LogDesk.runtimeconfig.json
+E:\LogDesk - A Virtual LogBook\LogDesk.pdb
+E:\LogDesk - A Virtual LogBook\System.Data.SqlClient.dll
+E:\LogDesk - A Virtual LogBook\runtimes\win-arm64\native\sni.dll
+E:\LogDesk - A Virtual LogBook\runtimes\win-x64\native\sni.dll
+E:\LogDesk - A Virtual LogBook\runtimes\win-x86\native\sni.dll
+E:\LogDesk - A Virtual LogBook\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\LogDesk - A Virtual LogBook\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
