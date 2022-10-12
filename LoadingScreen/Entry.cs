@@ -1,4 +1,6 @@
-﻿using System.Data;
+﻿using LogDesk;
+using Microsoft.Win32;
+using System.Data;
 using System.Data.SqlClient;
 using System.Timers;
 
@@ -7,7 +9,7 @@ namespace LoadingScreen
 {
     public partial class Entry : Form
     {
-
+        EnableDisableKeys ed = new EnableDisableKeys();
         public int id { get; set; }
         System.Timers.Timer timer;
 
@@ -18,6 +20,9 @@ namespace LoadingScreen
         {
             InitializeComponent();
             this.id = id;
+      //     RegistryKey objRegistryKey = Registry.CurrentUser.CreateSubKey(
+        //     @"Software\Microsoft\Windows\CurrentVersion\Policies\System");
+          //     objRegistryKey.DeleteValue("DisableTaskMgr");
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -34,7 +39,7 @@ namespace LoadingScreen
 
             if (count > 1)
             {
-                label1.Text = "Attendance already marked";
+                label1.Text = "Already Done ";
             }
             else
             {
@@ -50,9 +55,9 @@ namespace LoadingScreen
         {
             timer.Stop();
             Application.DoEvents();
-
-            //SqlConnection con = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-"); 
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-4I2HF4V;Initial Catalog=SBJITMR;Persist Security Info=True;User ID = admin;Password = 1234");
+            
+            SqlConnection con = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-"); 
+            //SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-4I2HF4V;Initial Catalog=SBJITMR;Persist Security Info=True;User ID = admin;Password = 1234");
             SqlCommand cmd = new SqlCommand("UPDATE EntryLog SET ExitTime=@ExitTime where id = @id", con);
             cmd.CommandType = CommandType.Text;
             String exitTime = DateTime.Now.ToLongTimeString();
@@ -87,7 +92,7 @@ namespace LoadingScreen
 
         private void Entry_Load(object sender, EventArgs e)
         {
-            this.Text = "Mark your Attendance";
+            this.Text = "Provide Some Information";
             this.ShowInTaskbar = false;
             timer = new System.Timers.Timer();
 
@@ -99,6 +104,9 @@ namespace LoadingScreen
             {
                 button1.Hide();
             }
+
+            ed.SuppressWinKey = false;
+            ed.KeyHook();
         }
 
         private void onTimeEvent(object? sender, ElapsedEventArgs e)

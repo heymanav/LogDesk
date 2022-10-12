@@ -1,6 +1,7 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
 using System.Net.NetworkInformation;
+using System.Text.RegularExpressions;
 using LogDesk;
 
 namespace LoadingScreen
@@ -16,8 +17,8 @@ namespace LoadingScreen
         }
 
 
-        //SqlConnection conn = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
-        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-4I2HF4V;Initial Catalog=SBJITMR;Persist Security Info=True;User ID = admin;Password = 1234");
+        SqlConnection conn = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
+        //SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-4I2HF4V;Initial Catalog=SBJITMR;Persist Security Info=True;User ID = admin;Password = 1234");
 
         private void LoginScreen_KeyDown(object sender, KeyEventArgs e)
         {
@@ -48,6 +49,20 @@ namespace LoadingScreen
             this.Text = "Login";
         }
 
+        private void usertxt_Leave(object sender, EventArgs e)
+        {
+            string pattern = @"^[a-z0-9._-]+@sbjit\.edu\.in$";
+            if (Regex.IsMatch(usertxt.Text, pattern))
+            {
+                errorProvider1.Clear();
+                errorProvider1 = null;
+            }
+            else
+            {
+                errorProvider1.SetError(this.usertxt, "Please Provide Valid Email Address");
+
+            }
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -65,14 +80,14 @@ namespace LoadingScreen
                 DataTable dtable = new DataTable();
                 sda.Fill(dtable);
 
-                if (dtable.Rows.Count > 0)
+                if (dtable.Rows.Count > 0 && errorProvider1 == null)
                 {
                     email = usertxt.Text;
                     user_passowrd = passtxt.Text;
 
                     //insert information into database
-                    //SqlConnection con = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
-                    SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-4I2HF4V;Initial Catalog=SBJITMR;Persist Security Info=True;User ID = admin;Password = 1234");
+                    SqlConnection con = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
+                   // SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-4I2HF4V;Initial Catalog=SBJITMR;Persist Security Info=True;User ID = admin;Password = 1234");
                     SqlCommand cmd = new SqlCommand("INSERT INTO EntryLog(Email,PC_Name,Date,EntryTime,MAC_Address) values (@Email,@PC_Name,@Date,@EntryTime,@MAC_Address)", con);
                     SqlCommand cmd1 = new SqlCommand("select id from EntryLog where Email=@email AND PC_Name=@pcname AND EntryTime=@entrytime", con);
 
@@ -143,5 +158,7 @@ namespace LoadingScreen
             form.Show();
             this.Hide();
         }
+
+
     }
 }

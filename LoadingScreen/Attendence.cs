@@ -15,41 +15,42 @@ namespace LoadingScreen
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            this.Text = "Attendance";
+            this.Text = "Details";
             
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != string.Empty && textBox2.Text != string.Empty && textBox3.Text != string.Empty && textBox4.Text != string.Empty)
+            if (comboBox1.Text != string.Empty && textBox2.Text != string.Empty && textBox3.Text != string.Empty && textBox4.Text != string.Empty)
             {
-                SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-4I2HF4V;Initial Catalog=SBJITMR;Persist Security Info=True;User ID = admin;Password = 1234");
-                SqlCommand cmd = new SqlCommand("INSERT INTO attendence values (@Roll_no,@Name,@Subject,@Purpose)", con);
+                SqlConnection con = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
+                //SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-4I2HF4V;Initial Catalog=SBJITMR;Persist Security Info=True;User ID = admin;Password = 1234");
+                SqlCommand cmd = new SqlCommand("INSERT INTO attendence values (@Category,@Name,@Lab,@Purpose)", con);
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@Roll_no", textBox1.Text);
+                cmd.Parameters.AddWithValue("@Category", comboBox1.Text);
                 cmd.Parameters.AddWithValue("@Name", textBox2.Text);
-                cmd.Parameters.AddWithValue("@Subject", textBox3.Text);
+                cmd.Parameters.AddWithValue("@Lab", textBox3.Text);
                 cmd.Parameters.AddWithValue("@Purpose", textBox4.Text);
 
                 con.Open();
                 cmd.ExecuteNonQuery();
-                SqlCommand query = new SqlCommand("Update EntryLog SET Roll_no = @Roll_no,Name = @Name,Subject = @Subject,Purpose = @Purpose where id = @id", con);
+                SqlCommand query = new SqlCommand("Update EntryLog SET Category = @Category,Name = @Name,Lab = @Lab,Purpose = @Purpose where id = @id", con);
                 query.CommandType = CommandType.Text;
-                query.Parameters.AddWithValue("@Roll_no", textBox1.Text);
+                query.Parameters.AddWithValue("@Category", comboBox1.Text);
                 query.Parameters.AddWithValue("@Name", textBox2.Text);
-                query.Parameters.AddWithValue("@Subject", textBox3.Text);
+                query.Parameters.AddWithValue("@Lab", textBox3.Text);
                 query.Parameters.AddWithValue("@Purpose", textBox4.Text);
                 query.Parameters.AddWithValue("@id", id);
                 query.ExecuteNonQuery();
                 con.Close();
 
-                MessageBox.Show("Your Attendance has been Successfully Marked!");
+                MessageBox.Show("Your Details has been Successfully Registered!");
                 button1.Hide();
             }
             else
             {
                 MessageBox.Show("Please Fill all Fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox1.Clear(); textBox2.Clear(); textBox3.Clear(); textBox4.Clear();
+                 textBox2.Clear(); textBox3.Clear(); textBox4.Clear();
             }
         }
 

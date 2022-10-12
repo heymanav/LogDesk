@@ -33,9 +33,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.SuspendLayout();
             // 
             // textBox1
@@ -68,9 +68,16 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(219, 111);
             this.button1.TabIndex = 2;
-            this.button1.Text = " Mark Attendance";
+            this.button1.Text = "Personal Information";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.notifyIcon1.BalloonTipTitle = "LogDesk";
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.DoubleClick += new System.EventHandler(this.notifyIcon1_DoubleClick);
             // 
             // label1
             // 
@@ -93,13 +100,6 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Note : After closing this window, the System will Shutdown and Sesssion will be r" +
     "ecorded.";
-            // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.notifyIcon1.BalloonTipTitle = "LogDesk";
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.DoubleClick += new System.EventHandler(this.notifyIcon1_DoubleClick);
             // 
             // Entry
             // 
@@ -131,8 +131,8 @@
         private TextBox textBox1;
         private System.Windows.Forms.Timer timer1;
         private Button button1;
+        private NotifyIcon notifyIcon1;
         private Label label1;
         private Label label2;
-        private NotifyIcon notifyIcon1;
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Attendence));
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,23 +38,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(273, 92);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(110, 23);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(273, 137);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(110, 23);
+            this.textBox2.Size = new System.Drawing.Size(121, 23);
             this.textBox2.TabIndex = 1;
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             // 
@@ -64,7 +55,7 @@
             this.textBox3.Location = new System.Drawing.Point(273, 185);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(110, 23);
+            this.textBox3.Size = new System.Drawing.Size(121, 23);
             this.textBox3.TabIndex = 2;
             this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
             // 
@@ -74,11 +65,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(161, 92);
+            this.label1.Location = new System.Drawing.Point(141, 92);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 24);
+            this.label1.Size = new System.Drawing.Size(105, 24);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Roll no :";
+            this.label1.Text = "Category :";
             // 
             // label2
             // 
@@ -98,11 +89,11 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label3.Location = new System.Drawing.Point(157, 185);
+            this.label3.Location = new System.Drawing.Point(188, 185);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 24);
+            this.label3.Size = new System.Drawing.Size(58, 24);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Subject :";
+            this.label3.Text = "Lab :";
             // 
             // button1
             // 
@@ -128,9 +119,9 @@
             this.label5.ForeColor = System.Drawing.Color.LimeGreen;
             this.label5.Location = new System.Drawing.Point(131, 30);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(291, 24);
+            this.label5.Size = new System.Drawing.Size(279, 24);
             this.label5.TabIndex = 8;
-            this.label5.Text = "MARK YOUR ATTENDENCE ";
+            this.label5.Text = "PERSONAL INFORMATION";
             // 
             // label4
             // 
@@ -150,15 +141,29 @@
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(110, 23);
+            this.textBox4.Size = new System.Drawing.Size(121, 23);
             this.textBox4.TabIndex = 3;
             this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Student",
+            "Faculty",
+            "Guest"});
+            this.comboBox1.Location = new System.Drawing.Point(273, 93);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 11;
             // 
             // Attendence
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(555, 345);
+            this.ClientSize = new System.Drawing.Size(551, 345);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
@@ -168,7 +173,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
@@ -183,8 +187,6 @@
         }
 
         #endregion
-
-        private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;
         private Label label1;
@@ -194,5 +196,6 @@
         private Label label5;
         private Label label4;
         private TextBox textBox4;
+        private ComboBox comboBox1;
     }
 }
