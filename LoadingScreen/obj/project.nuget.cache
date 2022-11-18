@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5a05E9t9iBmDSY2LylGP0P+86IM1c849chtZlI/cPm9+N98QV/PIFamPwwWDfh57ud+ZcniiyZH5LR2c0Ye4Ew==",
+  "dgSpecHash": "e/DSwZyPhC9BvkKH6ilc6rOGQLhs4R8GiWhdQ+S5W6sq11xpAA+aR/kv0NsTxh5UbRBWNJiW9MzZBG6JHx6YuQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Mini Project\\miniProjectt\\LoadingScreen\\LogDesk.csproj",
+  "projectFilePath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\miniProjectt\\LoadingScreen\\LogDesk.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

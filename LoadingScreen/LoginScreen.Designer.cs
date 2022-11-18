@@ -43,21 +43,25 @@
             // 
             // usertxt
             // 
-            this.usertxt.Location = new System.Drawing.Point(1581, 485);
+            this.usertxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.usertxt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.usertxt.Location = new System.Drawing.Point(1280, 318);
             this.usertxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.usertxt.Name = "usertxt";
-            this.usertxt.Size = new System.Drawing.Size(229, 23);
+            this.usertxt.Size = new System.Drawing.Size(229, 29);
             this.usertxt.TabIndex = 0;
             this.usertxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.usertxt_KeyDown);
             this.usertxt.Leave += new System.EventHandler(this.usertxt_Leave);
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoEllipsis = true;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(1345, 475);
+            this.label1.Location = new System.Drawing.Point(1070, 305);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(181, 42);
             this.label1.TabIndex = 0;
@@ -65,21 +69,24 @@
             // 
             // passtxt
             // 
-            this.passtxt.Location = new System.Drawing.Point(1581, 582);
+            this.passtxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.passtxt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.passtxt.Location = new System.Drawing.Point(1280, 390);
             this.passtxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.passtxt.Name = "passtxt";
             this.passtxt.PasswordChar = '*';
-            this.passtxt.Size = new System.Drawing.Size(229, 23);
+            this.passtxt.Size = new System.Drawing.Size(229, 29);
             this.passtxt.TabIndex = 1;
             this.passtxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.passtxt_KeyDown);
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label3.Location = new System.Drawing.Point(1336, 572);
+            this.label3.Location = new System.Drawing.Point(1061, 376);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(190, 42);
             this.label3.TabIndex = 5;
@@ -87,6 +94,7 @@
             // 
             // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.BackColor = System.Drawing.Color.MidnightBlue;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -94,7 +102,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.LimeGreen;
-            this.button2.Location = new System.Drawing.Point(1336, 657);
+            this.button2.Location = new System.Drawing.Point(1058, 472);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(193, 60);
             this.button2.TabIndex = 6;
@@ -104,18 +112,22 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Verdana", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label4.Location = new System.Drawing.Point(81, 535);
+            this.label4.Location = new System.Drawing.Point(92, 359);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(472, 59);
+            this.label4.Size = new System.Drawing.Size(363, 59);
             this.label4.TabIndex = 9;
-            this.label4.Text = "STUDENT LOGIN";
+            this.label4.Text = "USER LOGIN";
             // 
             // signup
             // 
+            this.signup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.signup.BackColor = System.Drawing.Color.MidnightBlue;
             this.signup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.signup.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -123,7 +135,7 @@
             this.signup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.signup.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.signup.ForeColor = System.Drawing.Color.LimeGreen;
-            this.signup.Location = new System.Drawing.Point(1645, 657);
+            this.signup.Location = new System.Drawing.Point(1316, 472);
             this.signup.Name = "signup";
             this.signup.Size = new System.Drawing.Size(193, 60);
             this.signup.TabIndex = 10;
@@ -142,7 +154,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1850, 878);
+            this.ClientSize = new System.Drawing.Size(1556, 763);
             this.ControlBox = false;
             this.Controls.Add(this.signup);
             this.Controls.Add(this.label4);
@@ -158,8 +170,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoginScreen";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
+            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginScreen_FormClosing);
             this.Load += new System.EventHandler(this.Form2_Load);

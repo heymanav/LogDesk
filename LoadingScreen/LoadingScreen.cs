@@ -8,23 +8,23 @@ namespace LoadingScreen
     public partial class LoadingScreen : Form
     {
         EnableDisableKeys ed = new EnableDisableKeys();
-        RegistryKey reg = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
         public LoadingScreen()
         {
-          reg.SetValue("MyApplication", Application.ExecutablePath.ToString());
+            RegistryKey key = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+            key.SetValue("LogDesk", Application.ExecutablePath);
             InitializeComponent();
-            //            RegistryKey objRegistryKey = Registry.CurrentUser.CreateSubKey(
-            //              @"Software\Microsoft\Windows\CurrentVersion\Policies\System");
-            //        if (objRegistryKey.GetValue("DisableTaskMgr") == null)
-            //          objRegistryKey.SetValue("DisableTaskMgr", "1");
-             
+            //RegistryKey objregistrykey = Registry.CurrentUser.CreateSubKey(
+            //  @"Software\Microsoft\Windows\CurrentVersion\Policies\System");
+            //if (objregistrykey.GetValue("DisableTaskMgr") == null)
+            //    objregistrykey.SetValue("DisableTaskMgr", "1");
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             panel2.Width += 3;
 
-            if(panel2.Width >= 1380)
+            if(panel2.Width >= 1420)
             {
                 timer1.Stop();
                 WelScreen FM2 = new WelScreen();

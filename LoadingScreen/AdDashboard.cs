@@ -17,7 +17,8 @@ namespace LoadingScreen
         private void Form6_Load(object sender, EventArgs e)
         {
             this.Text = "Dashboard";
-            SqlConnection con = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
+            //SqlConnection con = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
+            SqlConnection con = new SqlConnection(@"Data Source=tcp:192.168.2.253,1433;Initial Catalog=LogDesk;User ID=user;Password=1234;");
             //SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-4I2HF4V;Initial Catalog=SBJITMR;Persist Security Info=True;User ID = admin;Password = 1234");
             con.Open();
             SqlCommand cmd = new SqlCommand("Select * from EntryLog", con);
@@ -85,10 +86,10 @@ namespace LoadingScreen
             string g9 = "Name";
             e.Graphics.DrawString(g9, new System.Drawing.Font("Times New Roman", 11, FontStyle.Bold), Brushes.Black, 830, 140);
 
-            string g10 = "Lab";
+            string g10 = "Purpose";
             e.Graphics.DrawString(g10, new System.Drawing.Font("Times New Roman", 11, FontStyle.Bold), Brushes.Black, 920, 140);
 
-            string g11 = "Purpose";
+            string g11 = "Purpose Details";
             e.Graphics.DrawString(g11, new System.Drawing.Font("Times New Roman", 11, FontStyle.Bold), Brushes.Black, 1015, 140);
 
             string l2 = "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
@@ -143,7 +144,8 @@ namespace LoadingScreen
             DateTime Date1 = dateTimePicker1.Value.Date;
             DateTime Date2 = dateTimePicker2.Value.Date;
 
-            SqlConnection con = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
+            //SqlConnection con = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
+            SqlConnection con = new SqlConnection(@"Data Source=tcp:192.168.2.253,1433;Initial Catalog=LogDesk;User ID=user;Password=1234;");
             //SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-4I2HF4V;Initial Catalog=SBJITMR;Persist Security Info=True;User ID = admin;Password = 1234");
             con.Open();
             SqlCommand cmd = new SqlCommand("Select * from EntryLog where PC_Name like '" + textBox1.Text + "%' AND Date Between '"+Date1+"' AND '"+Date2+"'", con);

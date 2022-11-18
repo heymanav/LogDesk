@@ -1,0 +1,11 @@
+E:\LOG\LogDesk.exe
+E:\LOG\LogDesk.dll
+E:\LOG\LogDesk.deps.json
+E:\LOG\LogDesk.runtimeconfig.json
+E:\LOG\LogDesk.pdb
+E:\LOG\System.Data.SqlClient.dll
+E:\LOG\runtimes\win-arm64\native\sni.dll
+E:\LOG\runtimes\win-x64\native\sni.dll
+E:\LOG\runtimes\win-x86\native\sni.dll
+E:\LOG\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\LOG\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

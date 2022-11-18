@@ -20,9 +20,9 @@ namespace LoadingScreen
         {
             InitializeComponent();
             this.id = id;
-      //     RegistryKey objRegistryKey = Registry.CurrentUser.CreateSubKey(
-        //     @"Software\Microsoft\Windows\CurrentVersion\Policies\System");
-          //     objRegistryKey.DeleteValue("DisableTaskMgr");
+            //RegistryKey objRegistryKey = Registry.CurrentUser.CreateSubKey(
+            //@"Software\Microsoft\Windows\CurrentVersion\Policies\System");
+            //objRegistryKey.DeleteValue("DisableTaskMgr");
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -55,8 +55,9 @@ namespace LoadingScreen
         {
             timer.Stop();
             Application.DoEvents();
-            
-            SqlConnection con = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-"); 
+
+            // SqlConnection con = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-"); 
+            SqlConnection con = new SqlConnection(@"Data Source=tcp:192.168.2.253,1433;Initial Catalog=LogDesk;User ID=user;Password=1234;");
             //SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-4I2HF4V;Initial Catalog=SBJITMR;Persist Security Info=True;User ID = admin;Password = 1234");
             SqlCommand cmd = new SqlCommand("UPDATE EntryLog SET ExitTime=@ExitTime where id = @id", con);
             cmd.CommandType = CommandType.Text;

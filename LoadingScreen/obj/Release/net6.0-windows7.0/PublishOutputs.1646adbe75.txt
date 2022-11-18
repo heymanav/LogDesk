@@ -1,0 +1,11 @@
+C:\Users\Lenovo\OneDrive\Desktop\miniProjectt\LoadingScreen\bin\Release\net6.0-windows7.0\app.publish\LogDesk.exe
+C:\Users\Lenovo\OneDrive\Desktop\miniProjectt\LoadingScreen\bin\Release\net6.0-windows7.0\app.publish\LogDesk.dll
+C:\Users\Lenovo\OneDrive\Desktop\miniProjectt\LoadingScreen\bin\Release\net6.0-windows7.0\app.publish\LogDesk.deps.json
+C:\Users\Lenovo\OneDrive\Desktop\miniProjectt\LoadingScreen\bin\Release\net6.0-windows7.0\app.publish\LogDesk.runtimeconfig.json
+C:\Users\Lenovo\OneDrive\Desktop\miniProjectt\LoadingScreen\bin\Release\net6.0-windows7.0\app.publish\LogDesk.pdb
+C:\Users\Lenovo\OneDrive\Desktop\miniProjectt\LoadingScreen\bin\Release\net6.0-windows7.0\app.publish\System.Data.SqlClient.dll
+C:\Users\Lenovo\OneDrive\Desktop\miniProjectt\LoadingScreen\bin\Release\net6.0-windows7.0\app.publish\runtimes\win-arm64\native\sni.dll
+C:\Users\Lenovo\OneDrive\Desktop\miniProjectt\LoadingScreen\bin\Release\net6.0-windows7.0\app.publish\runtimes\win-x64\native\sni.dll
+C:\Users\Lenovo\OneDrive\Desktop\miniProjectt\LoadingScreen\bin\Release\net6.0-windows7.0\app.publish\runtimes\win-x86\native\sni.dll
+C:\Users\Lenovo\OneDrive\Desktop\miniProjectt\LoadingScreen\bin\Release\net6.0-windows7.0\app.publish\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Lenovo\OneDrive\Desktop\miniProjectt\LoadingScreen\bin\Release\net6.0-windows7.0\app.publish\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

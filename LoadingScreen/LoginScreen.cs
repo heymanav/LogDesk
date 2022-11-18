@@ -17,8 +17,10 @@ namespace LoadingScreen
         }
 
 
-        SqlConnection conn = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
-        //SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-4I2HF4V;Initial Catalog=SBJITMR;Persist Security Info=True;User ID = admin;Password = 1234");
+        //SqlConnection conn = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
+        // SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-MBJ4P5UH;Initial Catalog=LogDesk;User ID = user;Password = 1234");
+       // SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-8MPI8O0;Initial Catalog=LogDesk;Persist Security Info=True;User ID=user;Password=1234");
+       SqlConnection conn = new SqlConnection(@"Data Source=tcp:192.168.2.253,1433;Initial Catalog=LogDesk;User ID=user;Password=1234;");
 
         private void LoginScreen_KeyDown(object sender, KeyEventArgs e)
         {
@@ -52,15 +54,15 @@ namespace LoadingScreen
         private void usertxt_Leave(object sender, EventArgs e)
         {
             string pattern = @"^[a-z0-9._-]+@sbjit\.edu\.in$";
-            if (Regex.IsMatch(usertxt.Text, pattern))
+            if (Regex.IsMatch(usertxt.Text, pattern) == false)
             {
-                errorProvider1.Clear();
-                errorProvider1 = null;
+                usertxt.Focus();
+                errorProvider1.SetError(this.usertxt, "Please Provide Valid Email Address");
+
             }
             else
             {
-                errorProvider1.SetError(this.usertxt, "Please Provide Valid Email Address");
-
+                errorProvider1.Clear();
             }
         }
 
@@ -70,80 +72,91 @@ namespace LoadingScreen
 
             email = usertxt.Text;
             user_passowrd = passtxt.Text;
-           
 
-            try
+            SqlConnection cn = new SqlConnection(@"Data Source=tcp:192.168.2.253,1433;Initial Catalog=LogDesk;User ID=user;Password=1234;");
+            cn.Open();
+            SqlCommand cm = new SqlCommand("select * from EntryLog where Email='" + usertxt.Text + "' AND ExitTime IS NULL ", cn);
+            SqlDataReader dr = cm.ExecuteReader();
+            if (dr.Read())
             {
-                String querry = "SELECT * FROM Login WHERE Email = '" + email + "' AND Password = '" + user_passowrd + "' ";
-                SqlDataAdapter sda = new SqlDataAdapter(querry, conn);
-
-                DataTable dtable = new DataTable();
-                sda.Fill(dtable);
-
-                if (dtable.Rows.Count > 0 && errorProvider1 == null)
+                dr.Close();
+                MessageBox.Show("Your Account is already Logged in somewhere Kindly LogOut of that PC First!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cn.Close();
+            }
+            else
+            {
+                try
                 {
-                    email = usertxt.Text;
-                    user_passowrd = passtxt.Text;
+                    String querry = "SELECT * FROM Login WHERE Email = '" + email + "' AND Password = '" + user_passowrd + "' ";
+                    SqlDataAdapter sda = new SqlDataAdapter(querry, conn);
 
-                    //insert information into database
-                    SqlConnection con = new SqlConnection(@"Data Source=den1.mssql7.gear.host;Initial Catalog=manavpandey157;User ID=manavpandey157;Password=Ko2bC40Ov_0-");
-                   // SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-4I2HF4V;Initial Catalog=SBJITMR;Persist Security Info=True;User ID = admin;Password = 1234");
-                    SqlCommand cmd = new SqlCommand("INSERT INTO EntryLog(Email,PC_Name,Date,EntryTime,MAC_Address) values (@Email,@PC_Name,@Date,@EntryTime,@MAC_Address)", con);
-                    SqlCommand cmd1 = new SqlCommand("select id from EntryLog where Email=@email AND PC_Name=@pcname AND EntryTime=@entrytime", con);
+                    DataTable dtable = new DataTable();
+                    sda.Fill(dtable);
 
-                    String entryTime = DateTime.Now.ToLongTimeString();
-                    String PC_Name = System.Environment.MachineName;
-                    var macAddr =
-                            (from nic in NetworkInterface.GetAllNetworkInterfaces()
-                            where nic.OperationalStatus == OperationalStatus.Up
-                            select nic.GetPhysicalAddress().ToString()
-                            ).FirstOrDefault();
-                    var date = DateTime.UtcNow.ToShortDateString();
-                    cmd1.CommandType = CommandType.Text;
-                    cmd1.Parameters.AddWithValue("@email", email);
-                    cmd1.Parameters.AddWithValue("@pcname", PC_Name);
-                    cmd1.Parameters.AddWithValue("@entrytime", entryTime);
-                    cmd.CommandType = CommandType.Text;
-                    cmd.Parameters.AddWithValue("@Email", email);
-                    cmd.Parameters.AddWithValue("@PC_Name", PC_Name);
-                    cmd.Parameters.AddWithValue("@Date", date);
-                    cmd.Parameters.AddWithValue("@EntryTime", entryTime);
-                    cmd.Parameters.AddWithValue("@MAC_Address", macAddr);
+                    if (dtable.Rows.Count > 0)
+                    {
+                        email = usertxt.Text;
+                        user_passowrd = passtxt.Text;
+
+                        //insert information into database
+                        //SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-8MPI8O0;Initial Catalog=LogDesk;Persist Security Info=True;User ID=user;Password=1234");
+                        SqlConnection con = new SqlConnection(@"Data Source=tcp:192.168.2.253,1433;Initial Catalog=LogDesk;User ID=user;Password=1234;");
+                        SqlCommand cmd = new SqlCommand("INSERT INTO EntryLog(Email,PC_Name,Date,EntryTime,MAC_Address) values (@Email,@PC_Name,@Date,@EntryTime,@MAC_Address)", con);
+                        SqlCommand cmd1 = new SqlCommand("select id from EntryLog where Email=@email AND PC_Name=@pcname AND EntryTime=@entrytime", con);
+
+                        String entryTime = DateTime.Now.ToLongTimeString();
+                        String PC_Name = System.Environment.MachineName;
+                        var macAddr =
+                                (from nic in NetworkInterface.GetAllNetworkInterfaces()
+                                 where nic.OperationalStatus == OperationalStatus.Up
+                                 select nic.GetPhysicalAddress().ToString()
+                                ).FirstOrDefault();
+                        var date = DateTime.UtcNow.ToShortDateString();
+                        cmd1.CommandType = CommandType.Text;
+                        cmd1.Parameters.AddWithValue("@email", email);
+                        cmd1.Parameters.AddWithValue("@pcname", PC_Name);
+                        cmd1.Parameters.AddWithValue("@entrytime", entryTime);
+                        cmd.CommandType = CommandType.Text;
+                        cmd.Parameters.AddWithValue("@Email", email);
+                        cmd.Parameters.AddWithValue("@PC_Name", PC_Name);
+                        cmd.Parameters.AddWithValue("@Date", date);
+                        cmd.Parameters.AddWithValue("@EntryTime", entryTime);
+                        cmd.Parameters.AddWithValue("@MAC_Address", macAddr);
 
 
-                    con.Open();
-                    cmd.ExecuteNonQuery();
-                    SqlDataReader sqlDataReader = cmd1.ExecuteReader();
-                    sqlDataReader.Read();
-                    id = (int)sqlDataReader["Id"];
-                    con.Close();
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        SqlDataReader sqlDataReader = cmd1.ExecuteReader();
+                        sqlDataReader.Read();
+                        id = (int)sqlDataReader["Id"];
+                        con.Close();
 
 
-                    //next screen
+                        //next screen
 
-                    Entry formn = new Entry(id);
-                    Attendence fr = new Attendence(id);
-                    formn.Show();
-                    this.Hide();
-                    button2.Hide();
+                        Entry formn = new Entry(id);
+                        Attendence fr = new Attendence(id);
+                        formn.Show();
+                        this.Hide();
+                        button2.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid Credentials", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        passtxt.Clear();
+                        usertxt.Clear();
+                    }
+
                 }
-                else
+                catch
                 {
-                    MessageBox.Show("Invalid Credentials", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    passtxt.Clear();
-                    usertxt.Clear();
+                    MessageBox.Show("Error");
                 }
-
+                finally
+                {
+                    conn.Close();
+                }
             }
-            catch
-            {
-                MessageBox.Show("Error");
-            }
-            finally
-            {
-                conn.Close();
-            }
-
 
         }
 
@@ -158,7 +171,5 @@ namespace LoadingScreen
             form.Show();
             this.Hide();
         }
-
-
     }
 }

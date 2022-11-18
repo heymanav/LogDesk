@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Mini Project\\miniProjectt\\LoadingScreen\\LogDesk.csproj": {}
+    "C:\\Users\\Lenovo\\OneDrive\\Desktop\\miniProjectt\\LoadingScreen\\LogDesk.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Mini Project\\miniProjectt\\LoadingScreen\\LogDesk.csproj": {
+    "C:\\Users\\Lenovo\\OneDrive\\Desktop\\miniProjectt\\LoadingScreen\\LogDesk.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Mini Project\\miniProjectt\\LoadingScreen\\LogDesk.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\miniProjectt\\LoadingScreen\\LogDesk.csproj",
         "projectName": "LogDesk",
-        "projectPath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Mini Project\\miniProjectt\\LoadingScreen\\LogDesk.csproj",
+        "projectPath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\miniProjectt\\LoadingScreen\\LogDesk.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Mini Project\\miniProjectt\\LoadingScreen\\obj\\",
+        "outputPath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\miniProjectt\\LoadingScreen\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -55,7 +55,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -67,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
